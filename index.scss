@@ -1,0 +1,12 @@
+@import "./input.scss";
+@import "./button.scss";
+@import "./pagination.scss";
+@import "./nav.scss";
+@import "./card.scss";
+@import "./parallax.scss";
+@import "./eye.scss";
+body {
+  min-height: 1500px;
+  background: #0a2a43;
+  cursor: url("a.png") 2 2, pointer;
+}

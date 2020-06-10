@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./index.css" />
+    <title>Learn CSS</title>
+  </head>
+
+  <body>
+    <!-- Simple Parallax Scrolling -->
+    <!-- <h1>Simple Parallax Scrolling</h1> -->
+    <section class="session-parallax">
+      <img src="bg.jpg" id="bg" />
+      <img src="moon.png" id="moon" />
+      <img src="mountain.png" id="mountain" />
+      <img src="road.png" id="road" />
+      <h2 id="text">Moon</h2>
+      <script type="text/javascript">
+        const bg = document.getElementById("bg");
+        const moon = document.getElementById("moon");
+        const mountain = document.getElementById("mountain");
+        const road = document.getElementById("road");
+        const text = document.getElementById("text");
+        window.addEventListener("scroll", function () {
+          var value = window.scrollY;
+
+          bg.style.top = value + 0.5 + "px";
+          moon.style.left = -value + 0.5 + "px";
+          mountain.style.top = -value + 0.15 + "px";
+          road.style.top = value + 0.15 + "px";
+          text.style.top = value + 1 + "px";
+        });
+      </script>
+    </section>
+
+    <!--  Navbar -->
+    <section class="section-nav">
+      <h1>Navbar</h1>
+      <nav>
+        <div class="hamburger">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+        <script type="text/javascript">
+          const hamburger = document.querySelector(".hamburger");
+          hamburger.addEventListener("click", function (e) {
+            const navLinks = document.querySelector(".nav-links");
+            navLinks.classList.toggle("open");
+          });
+        </script>
+        <ul class="nav-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Home</a></li>
+        </ul>
+      </nav>
+      <section class="landing">
+        <h1>Content</h1>
+      </section>
+    </section>
+
+    <!-- Input -->
+    <section>
+      <h1>Input</h1>
+      <div class="form">
+        <input type="text" name="name" autocomplete="off" required />
+        <label for="name" class="label-name-input">
+          <span class="content-label-name">Name</span>
+        </label>
+      </div>
+    </section>
+
+    <!-- Button -->
+    <section>
+      <h1>Button Ripple</h1>
+      <div class="form-button">
+        <a>Button</a>
+        <script type="text/javascript">
+          const buttons = document.querySelectorAll("a");
+          buttons.forEach((btn) => {
+            btn.addEventListener("click", function (e) {
+              let x = e.clientX - e.target.offsetLeft;
+              let y = e.clientY - e.target.offsetTop;
+
+              let ripples = document.createElement("span");
+              ripples.style.left = x + "px";
+              ripples.style.right = y + "px";
+              this.appendChild(ripples);
+              setTimeout(() => {
+                ripples.remove();
+              }, 1000);
+            });
+          });
+        </script>
+      </div>
+
+      <h1>Button Neon</h1>
+      <div class="form-button-neon">
+        <a href="#">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>Button Neon</a
+        >
+      </div>
+    </section>
+
+    <!-- Pagination -->
+    <section class="section-pagination">
+      <h1>Pagination</h1>
+      <ul class="pagination">
+        <li><div class="prev">< Prev</div></li>
+        <li class="pageNumber active"><a href="#">1</a></li>
+        <li class="pageNumber"><a href="#">2</a></li>
+        <li class="pageNumber"><a href="#">3</a></li>
+        <li class="pageNumber"><a href="#">4</a></li>
+        <li class="pageNumber"><a href="#">5</a></li>
+        <li><div class="next">Next ></div></li>
+      </ul>
+    </section>
+
+    <!-- Card UI -->
+    <section class="session-card">
+      <h1>Card UI</h1>
+
+      <div class="card-container">
+        <div class="card">
+          <div class="img">
+            <img
+              src="https://i.ebayimg.com/images/g/1bkAAOSwUpJdV-bQ/s-l300.jpg"
+            />
+          </div>
+
+          <div class="contentBox">
+            <h2>Shoes</h2>
+            <div class="size">
+              <h3>Size :</h3>
+              <span>7</span>
+              <span>8</span>
+              <span>9</span>
+              <span>10</span>
+            </div>
+            <div class="color">
+              <h3>Color :</h3>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <a href="#">By now</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--  Eye follow Mouse -->
+    <section class="session-eye">
+      <h1>Eye follow Mouse</h1>
+      <div class="eye-container">
+        <div class="face">
+          <div class="eyes">
+            <span class="eye"></span>
+            <span class="eye"></span>
+          </div>
+        </div>
+        <div class="face">
+          <div class="eyes">
+            <span class="eye"></span>
+            <span class="eye"></span>
+          </div>
+        </div>
+        <div class="face">
+          <div class="eyes">
+            <span class="eye"></span>
+            <span class="eye"></span>
+          </div>
+        </div>
+      </div>
+      <script type="text/javascript">
+        document
+          .querySelector(".session-eye")
+          .addEventListener("mousemove", function (e) {
+            var eyes = document.querySelectorAll(".eye");
+            eyes.forEach(function (eye) {
+              let x = eye.getBoundingClientRect().left + eye.clientWidth / 2;
+              let y = eye.getBoundingClientRect().top + eye.clientHeight / 2;
+              let radi = Math.atan2(event.pageX - x, event.pageY - y);
+              let rot = -(radi * (180 / Math.PI)) + 270;
+              eye.style.transform = "rotate(" + rot + "deg)";
+            });
+          });
+      </script>
+    </section>
+  </body>
+</html>
