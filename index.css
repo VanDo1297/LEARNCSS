@@ -526,9 +526,69 @@ nav {
           background: #333;
           border-radius: 50%; }
 
+.Menu {
+  background: white;
+  list-style: none;
+  text-decoration: none; }
+  .Menu h1 {
+    color: #000; }
+  .Menu .middle {
+    padding: 50px 100px;
+    transform: translate(0%, 0%); }
+    .Menu .middle .menu {
+      border-radius: 8px;
+      width: 300px;
+      overflow: hidden; }
+      .Menu .middle .menu .item {
+        border-top: 1px solid #3498db;
+        overflow: hidden;
+        z-index: 9; }
+        .Menu .middle .menu .item:target .smenu {
+          max-height: 10rem; }
+        .Menu .middle .menu .item .btn {
+          display: block;
+          padding: 16px 20px;
+          background: #2980b9;
+          position: relative;
+          color: #fff; }
+          .Menu .middle .menu .item .btn:before {
+            content: "";
+            position: absolute;
+            width: 14px;
+            height: 14px;
+            background: #2980b9;
+            bottom: -7px;
+            left: 20px;
+            transform: rotate(45deg); }
+        .Menu .middle .menu .item .smenu {
+          background: #333;
+          overflow: hidden;
+          transition: max-height 0.1s ease-out;
+          max-height: 0; }
+          .Menu .middle .menu .item .smenu a {
+            display: block;
+            padding: 16px 26px;
+            position: relative;
+            color: #fff; }
+            .Menu .middle .menu .item .smenu a:before {
+              content: "";
+              position: absolute;
+              width: 6px;
+              height: 100%;
+              background: #3498db;
+              left: 0;
+              top: 0;
+              opacity: 0;
+              transition: 0.1s; }
+            .Menu .middle .menu .item .smenu a:hover:before {
+              opacity: 1; }
+
 body {
   min-height: 1500px;
   background: #0a2a43;
   cursor: url("a.png") 2 2, pointer; }
+
+h1 {
+  color: #fff; }
 
 /*# sourceMappingURL=index.css.map */

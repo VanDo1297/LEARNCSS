@@ -1,0 +1,76 @@
+.Menu {
+  h1 {
+    color: #000;
+  }
+  background: white;
+  list-style: none;
+  text-decoration: none;
+
+  .middle {
+    padding: 50px 100px;
+    transform: translate(0%, 0%);
+    .menu {
+      border-radius: 8px;
+      width: 300px;
+      overflow: hidden;
+      .item {
+        border-top: 1px solid #3498db;
+        overflow: hidden;
+        z-index: 9;
+
+        &:target {
+          .smenu {
+            max-height: 10rem;
+          }
+        }
+        .btn {
+          display: block;
+          padding: 16px 20px;
+          background: #2980b9;
+          position: relative;
+          color: #fff;
+
+          &:before {
+            content: "";
+            position: absolute;
+            width: 14px;
+            height: 14px;
+            background: #2980b9;
+            bottom: -7px;
+            left: 20px;
+            transform: rotate(45deg);
+          }
+        }
+        .smenu {
+          background: #333;
+          overflow: hidden;
+          transition: max-height 0.1s ease-out;
+          max-height: 0;
+          a {
+            display: block;
+            padding: 16px 26px;
+            position: relative;
+            color: #fff;
+
+            &:before {
+              content: "";
+              position: absolute;
+              width: 6px;
+              height: 100%;
+              background: #3498db;
+              left: 0;
+              top: 0;
+              opacity: 0;
+              transition: 0.1s;
+            }
+            &:hover {
+              &:before {
+                opacity: 1;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
