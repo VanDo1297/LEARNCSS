@@ -12,6 +12,51 @@
   </head>
 
   <body>
+    <!--Profile card-->
+    <section>
+      <h1>Profile card</h1>
+      <div class="profile-container">
+        <div class="wrapper">
+          <a href="#">
+            <img src="mountain.png" />
+          </a>
+          <div class="title">SoldaDo</div>
+          <div class="place">Hồ Chí Minh</div>
+        </div>
+        <div class="content">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
+            eleifend ac augue ut mattis.
+          </p>
+          <div class="buttons">
+            <div class="btn">
+              <button>Message</button>
+            </div>
+            <div class="btn">
+              <button>Follow</button>
+            </div>
+          </div>
+        </div>
+        <div class="icons">
+          <li>
+            <a href="#"><span class="fab fa-facebook-f"></span></a>
+          </li>
+          <li>
+            <a href="#"><span class="fab fa-facebook-f"></span></a>
+          </li>
+          <li>
+            <a href="#"><span class="fab fa-facebook-f"></span></a>
+          </li>
+        </div>
+      </div>
+      <script type="text/javascript">
+        const img = document.querySelector("img");
+        img.onclick = function () {
+          this.classList.toggle("active");
+        };
+      </script>
+    </section>
+
     <!--  Menu -->
     <section class="Menu">
       <h1>Menu</h1>
@@ -250,6 +295,25 @@
           <div class="contentBox">
             <div>
               <h3>Design</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
+                eleifend ac augue ut mattis. Donec id dui id magna tempor
+                condimentum. Duis tortor sapien, suscipit ut sem ut, convallis
+                porttitor nunc.
+              </p>
+              <a href="#">Read more</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" data-text="Design">
+          <div class="img" data-text="Design">
+            <img src="mountain.png" />
+          </div>
+
+          <div class="contentBox">
+            <div>
+              <h3>Design</h3>
               <p>aaaaaaaa3</p>
               <a href="#">Read more</a>
             </div>
@@ -294,6 +358,20 @@
               eye.style.transform = "rotate(" + rot + "deg)";
             });
           });
+      </script>
+    </section>
+
+    <!--Image Comparision-->
+    <section class="session-image-comparision" id="session-image-comparision">
+      <h1>Image Comparision</h1>
+      <div id="layer"></div>
+      <script type="text/javascript">
+        const w = document.getElementById("session-image-comparision");
+        var slide = document.getElementById("layer");
+        w.addEventListener("mousemove", function (e) {
+          var x = e.clientX;
+          slide.style.left = x + "px";
+        });
       </script>
     </section>
   </body>
