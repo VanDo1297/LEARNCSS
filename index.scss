@@ -8,11 +8,12 @@
 @import "./menu.scss";
 @import "./image-comparision.scss";
 @import "./profile-card.scss";
-
+@import "./linear.scss";
+@import "./slider.scss";
 body {
   min-height: 1500px;
   background: #0a2a43;
-  cursor: url("a.png") 2 2, pointer;
+  cursor: url(a.png), auto;
 }
 
 h1 {

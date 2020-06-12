@@ -27,7 +27,7 @@
         transition: 0.5s ease-in-out;
       }
       &:hover::before {
-        clip-path: circle(300px at 80% -20%);
+        clip-path: circle(300px at 80% 20%);
       }
 
       &:after {

@@ -2,8 +2,13 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./index.css" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <link rel="stylesheet" type="text/css" href="swiper.min.css" />
+    <link rel="stylesheet" href="index.css" />
+
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.0.6/css/all.css"
@@ -348,7 +353,7 @@
       <script type="text/javascript">
         document
           .querySelector(".session-eye")
-          .addEventListener("mousemove", function (e) {
+          .addEventListener("mousemove", function (event) {
             var eyes = document.querySelectorAll(".eye");
             eyes.forEach(function (eye) {
               let x = eye.getBoundingClientRect().left + eye.clientWidth / 2;
@@ -361,7 +366,125 @@
       </script>
     </section>
 
-    <!--Image Comparision-->
+    <!--Linear layout-->
+    <h1>Linear layout</h1>
+    <section class="session-linear" id="session-linear">
+      <div>
+        <div class="content" id="content">
+          <div class="div1" id="div1">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <div class="div2"></div>
+          </div>
+        </div>
+      </div>
+      <script type="text/javascript">
+        const content = document.getElementById("session-linear");
+        content.addEventListener("mousemove", function (e) {
+          console.log(e.clientY);
+          console.log(e.clientX);
+        });
+      </script>
+    </section>
+
+    <!--Slider-->
+    <h1>Slider</h1>
+
+    <section class="session-swiper">
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="imgBox">
+              <img src="bg.jpg" />
+            </div>
+            <div class="detail">
+              <p>Solda</p>
+              <span>Slider With SwiperJs</span>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="imgBox">
+              <img src="bg.jpg" />
+            </div>
+            <div class="detail">
+              <p>Solda</p>
+              <span>Slider With SwiperJs</span>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="imgBox">
+              <img src="bg.jpg" />
+            </div>
+            <div class="detail">
+              <p>Solda</p>
+              <span>Slider With SwiperJs</span>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="imgBox">
+              <img src="bg.jpg" />
+            </div>
+            <div class="detail">
+              <p>Solda</p>
+              <span>Slider With SwiperJs</span>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="imgBox">
+              <img src="bg.jpg" />
+            </div>
+            <div class="detail">
+              <p>Solda</p>
+              <span>Slider With SwiperJs</span>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="imgBox">
+              <img src="bg.jpg" />
+            </div>
+            <div class="detail">
+              <p>Solda</p>
+              <span>Slider With SwiperJs</span>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="imgBox">
+              <img src="bg.jpg" />
+            </div>
+            <div class="detail">
+              <p>Solda</p>
+              <span>Slider With SwiperJs</span>
+            </div>
+          </div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+        <script type="text/javascript" src="swiper.min.js"></script>
+        <script>
+          var swiper = new Swiper(".swiper-container", {
+            effect: "coverflow",
+            // grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: "auto",
+            coverflowEffect: {
+              rotate: 50,
+              stretch: 0,
+              depth: 100,
+              modifier: 1,
+              slideShadows: true,
+            },
+            pagination: {
+              el: ".swiper-pagination",
+            },
+          });
+        </script>
+      </div>
+    </section>
+
+    <!--   Image Comparision-->
     <section class="session-image-comparision" id="session-image-comparision">
       <h1>Image Comparision</h1>
       <div id="layer"></div>

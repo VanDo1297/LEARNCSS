@@ -298,7 +298,7 @@ nav {
         clip-path: circle(150px at 80% 20%);
         transition: 0.5s ease-in-out; }
       .session-card .card-container .card:hover::before {
-        clip-path: circle(300px at 80% -20%); }
+        clip-path: circle(300px at 80% 20%); }
       .session-card .card-container .card:after {
         content: "Nike";
         position: absolute;
@@ -803,10 +803,105 @@ nav {
         .profile-container .icons li a:hover {
           transform: scale(0.9); }
 
+.session-linear {
+  position: relative;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px !important;
+  height: 250px !important;
+  left: calc(50% - 200px);
+  overflow: hidden; }
+  .session-linear .content {
+    display: flex;
+    justify-content: center;
+    height: 250px;
+    width: 400px;
+    overflow: hidden;
+    margin: 50px;
+    margin-top: unset; }
+    .session-linear .content .div1 {
+      margin-top: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      background: linear-gradient(45deg, #16a085 -10%, #f1c40f, #c0392b);
+      width: 400px;
+      height: 400px;
+      border-radius: 50%; }
+      .session-linear .content .div1 span {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background: linear-gradient(45deg, #16a085 -10%, #f1c40f, #c0392b); }
+        .session-linear .content .div1 span:nth-child(1) {
+          filter: blur(5px); }
+        .session-linear .content .div1 span:nth-child(2) {
+          filter: blur(10px); }
+        .session-linear .content .div1 span:nth-child(3) {
+          filter: blur(25px); }
+        .session-linear .content .div1 span:nth-child(4) {
+          filter: blur(20px); }
+      .session-linear .content .div1 .div2 {
+        position: relative;
+        background: green;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%; }
+
+.session-swiper {
+  min-height: 500px;
+  position: relative;
+  width: 100%;
+  background: #828282; }
+  .session-swiper .swiper-container {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    height: 100%; }
+  .session-swiper .swiper-wrapper {
+    height: 350px; }
+  .session-swiper .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+    background: #fff; }
+    .session-swiper .swiper-slide .imgBox {
+      width: 100%;
+      height: 100%; }
+      .session-swiper .swiper-slide .imgBox img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; }
+    .session-swiper .swiper-slide .detail {
+      background: #fff;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+      box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3, 0 0 120px #2196f3;
+      padding: 0px 10px; }
+      .session-swiper .swiper-slide .detail p {
+        font-size: 14px;
+        color: #333; }
+      .session-swiper .swiper-slide .detail span {
+        font-size: 12px;
+        color: #333; }
+    .session-swiper .swiper-slide:nth-child(2) .detail {
+      box-shadow: 0 0 10px #424242, 0 0 40px #474747, 0 0 80px #747474, 0 0 120px #242424; }
+    .session-swiper .swiper-slide:nth-child(4) .detail {
+      box-shadow: 0 0 10px #b3b3b3, 0 0 40px #bc3333, 0 0 80px #bcbcbc, 0 0 120px yellow; }
+    .session-swiper .swiper-slide:nth-child(5) .detail {
+      box-shadow: 0 0 10px #424242, 0 0 40px #474747, 0 0 80px #747474, 0 0 120px #242424; }
+    .session-swiper .swiper-slide:nth-child(3) .detail {
+      box-shadow: 0 0 10px #424242, 0 0 40px #474747, 0 0 80px #747474, 0 0 120px #242424; }
+
 body {
   min-height: 1500px;
   background: #0a2a43;
-  cursor: url("a.png") 2 2, pointer; }
+  cursor: url(a.png), auto; }
 
 h1 {
   color: #fff; }
